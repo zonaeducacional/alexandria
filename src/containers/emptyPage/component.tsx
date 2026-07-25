@@ -3,8 +3,8 @@ import "./emptyPage.css";
 import { emptyList } from "../../constants/emptyList";
 import { Trans } from "react-i18next";
 import { EmptyPageProps, EmptyPageState } from "./interface";
-import emptyDark from "../../assets/images/empty-dark.svg";
-import emptyLight from "../../assets/images/empty-light.svg";
+import emptyDark from "../../assets/images/empty-dark-new.png";
+import emptyLight from "../../assets/images/empty-light-new.png";
 
 import { ConfigService } from "../../assets/lib/kookit-extra-browser.min";
 
