@@ -139,6 +139,9 @@ class SettingDialog extends React.Component<
 
           {/* 第二组 */}
           <div className="setting-dialog-sidebar-group">
+            {this.renderSidebarItem("sync", "icon-sync", "Sync and backup", "18px")}
+            {this.renderSidebarItem("account", "icon-user", "Account", "18px")}
+            {isElectron && this.renderSidebarItem("plugins", "icon-plugin", "Plugins", "18px")}
             {this.renderSidebarItem(
               "ai",
               "icon-idea-line",
@@ -187,6 +190,12 @@ class SettingDialog extends React.Component<
               <AppearanceSetting />
             ) : this.props.settingMode === "data" ? (
               <DataSetting />
+            ) : this.props.settingMode === "sync" ? (
+              <SyncSetting />
+            ) : this.props.settingMode === "account" ? (
+              <AccountSetting />
+            ) : this.props.settingMode === "plugins" && isElectron ? (
+              <PluginSetting />
             ) : this.props.settingMode === "ai" ? (
               <AISetting />
             ) : this.props.settingMode === "background" ? (
